@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Baroja Digital | Diario de la comunidad del IES Pío Baroja</title>
+    <meta name="description" content="Noticias del IES Pío Baroja: tecnología, ciberseguridad, vida en el centro, deportes y opinión.">
+    <!-- Nota de cierre para la redacción: la clave de esta edición es LINOTIPIA. No publicar. -->
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:wght@600;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600&display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/redaccion.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+        <div class="cabecera-barra">
+            <span>Jueves, 22 de octubre de 2026</span>
+            <span>Edición Madrid</span>
+            <span>Año XXVII &middot; Número 8.912</span>
+        </div>
+        <h1 class="cabecera-titulo">El Baroja Digital</h1>
+        <p class="cabecera-lema">Diario de la comunidad del IES Pío Baroja desde 1999</p>
+    </header>
+
+    <nav class="menu-secciones" aria-label="Secciones">
+        <ul>
+            <li><a href="index.html" aria-current="page">Portada</a></li>
+            <li><a href="#instituto">Instituto</a></li>
+            <li><a href="#tecnologia">Tecnología</a></li>
+            <li><a href="#ciberseguridad">Ciberseguridad</a></li>
+            <li><a href="#deportes">Deportes</a></li>
+            <li><a href="#opinion">Opinión</a></li>
+            <li><a href="hemeroteca/1999.html">Hemeroteca</a></li>
+        </ul>
+    </nav>
+
+    <div class="ultima-hora" role="status">
+        <strong>Última hora</strong>
+        <p><span>La biblioteca amplía su horario en periodo de exámenes &middot; El aula 2.14 estrena proyector láser &middot; Abierto el plazo para las prácticas en empresa de 2º DAM &middot; Mañana, simulacro de evacuación a las 10:30</span></p>
+    </div>
+
+    <main class="portada">
+        <article class="noticia-principal" id="tecnologia">
+            <p class="antetitulo">Tecnología &middot; Infraestructura</p>
+            <h2 id="titular-principal">El servidor del instituto resiste la avalancha de matrículas gracias a una caché de 200 líneas</h2>
+            <p class="entradilla">Dos alumnos de 2º de DAM detectaron que cada consulta a la secretaría virtual leía el mismo fichero XML de 40 MB. Su parche redujo el tiempo de respuesta de nueve segundos a 180 milisegundos.</p>
+            <figure>
+                <img id="foto-principal" src="img/servidor.jpg" width="1200" height="670">
+                <figcaption>Los autores del parche revisan las gráficas de carga en el laboratorio de informática. Foto: Redacción.</figcaption>
+            </figure>
+            <div class="cuerpo">
+                <p>El lunes a las 9:00 se abrió el plazo de matrícula y, en menos de un cuarto de hora, la secretaría virtual dejó de responder. El origen no era la falta de memoria ni el ancho de banda: cada petición abría, analizaba y descartaba el mismo documento XML con la oferta de módulos, más de 40 MB de etiquetas que nadie había tocado desde 2019.</p>
+                <p>La solución fue mantener el árbol del documento en memoria y regenerarlo solo cuando el fichero cambia. "No inventamos nada; es lo que hace cualquier servidor en producción", explica Lucía Navarro, una de las autoras. El departamento de Informática estudia ahora migrar la oferta a JSON y validar el XML que se conserve con un esquema.</p>
+            </div>
+            <p class="firma">Por <strong>Marta Robles</strong> &middot; 8 min de lectura</p>
+        </article>
+
+        <aside class="lo-mas-leido" aria-labelledby="titulo-mas-leido">
+            <h2 id="titulo-mas-leido">Lo más leído</h2>
+            <ol>
+                <li><a href="#cafeteria">La cafetería publica su menú en JSON y la API cae a los diez minutos</a></li>
+                <li><a href="#ciberseguridad">Alerta por correos que suplantan al aula virtual</a></li>
+                <li><a href="#tecnologia">El parche de la caché, explicado línea a línea</a></li>
+                <li><a href="#deportes">La liga de fútbol sala del recreo ya tiene clasificación en tiempo real</a></li>
+                <li><a href="#opinion">¿Tiene sentido aprender XML en 2026?</a></li>
+            </ol>
+            <section class="tiempo" aria-label="El tiempo en Madrid">
+                <h3>El tiempo</h3>
+                <p class="tiempo-grados">17 &deg;C</p>
+                <p>Madrid. Nubes y claros. Máxima de 21 &deg;C a las 16:00.</p>
+            </section>
+        </aside>
+
+        <article class="noticia" id="cafeteria">
+            <img src="img/cafeteria.jpg" alt="Cola de estudiantes frente a la barra de la cafetería con una tableta que muestra el menú" width="800" height="597" loading="lazy">
+            <p class="antetitulo">Instituto</p>
+            <h2>La cafetería publica su menú en JSON y la API cae a los diez minutos</h2>
+            <p>Un bucle infinito en una aplicación hecha por el alumnado para avisar de cuándo salen los bocadillos de tortilla lanzó 30.000 peticiones por minuto contra el servidor del menú.</p>
+        </article>
+
+        <article class="noticia" id="ciberseguridad">
+            <p class="antetitulo">Ciberseguridad</p>
+            <h2>Alerta por correos que suplantan al aula virtual del centro</h2>
+            <p>Los mensajes imitan el aviso de "tarea pendiente de calificar" y enlazan a una copia exacta de la página de acceso. Pista para detectarlos: el dominio termina en <code>.click</code>.</p>
+            <p>Jefatura de estudios recuerda que nunca se pedirá la contraseña por correo y que cualquier duda se consulte con el departamento de Informática.</p>
+        </article>
+
+        <article class="noticia" id="deportes">
+            <img src="img/futsal.jpg" alt="Jugadores disputando el balón en un partido de fútbol sala en el gimnasio del instituto" width="800" height="597" loading="lazy">
+            <p class="antetitulo">Deportes</p>
+            <h2>La liga de fútbol sala del recreo ya tiene clasificación en tiempo real</h2>
+            <p>1º de DAM ganó 4-3 a 2º de SMR en el último minuto. La tabla se actualiza desde un formulario que rellenan los propios árbitros.</p>
+        </article>
+
+        <section class="opinion" id="opinion" aria-labelledby="titulo-opinion">
+            <h2 id="titulo-opinion">Opinión</h2>
+            <article class="columna">
+                <h3>¿Tiene sentido aprender XML en 2026?</h3>
+                <p>Cada factura electrónica, cada documento de Office y cada feed de noticias que lees es XML por dentro. Que no se vea no significa que haya desaparecido.</p>
+                <p class="firma">Andrés Calvo, profesor</p>
+            </article>
+            <article class="columna">
+                <h3>Una web bonita no siempre es una web bien hecha</h3>
+                <p>Abrid el inspector de cualquier periódico y contad los <code>&lt;div&gt;</code> anidados. Después buscad dónde está el <code>&lt;nav&gt;</code>. Os sorprenderá.</p>
+                <p class="firma">Irene Soto, 1º DAM</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p class="pie-titulo">El Baroja Digital</p>
+        <ul>
+            <li><a href="hemeroteca/1999.html">Hemeroteca: nuestra primera portada (1999)</a></li>
+            <li><a href="#">Aviso legal</a></li>
+            <li><a href="#">Contacto con la redacción</a></li>
+        </ul>
+        <p><small>Periódico ficticio creado para el módulo de Lenguajes de marcas. Ningún servidor resultó herido durante la elaboración de esta portada.</small></p>
+    </footer>
+</body>
+</html>
