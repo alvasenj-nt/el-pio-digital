@@ -1,4 +1,4 @@
-| <img src="../../logoIES.jpg" alt="IES Pío Baroja" width="90"> | **IES Pío Baroja**<br>Departamento de Informática<br>Ciclo Superior DAM | **Lenguajes de marcas y sistemas de gestión de información**<br>UT-2. Cirugía web en directo: El Baroja Digital |
+| <img src="logoIES.jpg" alt="IES Pío Baroja" width="90"> | **IES Pío Baroja**<br>Departamento de Informática<br>Ciclo Superior DAM | **Lenguajes de marcas y sistemas de gestión de información**<br>UT-2. Cirugía web en directo: El Baroja Digital |
 |---|---|---|
 
 # El Baroja Digital: cirugía web en directo

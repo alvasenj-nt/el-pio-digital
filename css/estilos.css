@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    El Baroja Digital - hoja de estilos de la portada
    Todo el aspecto visual vive aquí: si esta hoja desaparece, el contenido
    sigue intacto y solo queda la presentación por defecto del navegador.
@@ -79,6 +79,9 @@ code {
     color: var(--color-suave);
 }
 
+
+.cabecera-bloque-marca { display: flex; align-items: center; justify-content: center; gap: 1.2rem; margin-top: 1rem; }
+.cabecera-logo { width: 68px; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
 .cabecera-titulo {
     margin: 1.2rem 0 0;
     font-family: var(--fuente-cabecera);
